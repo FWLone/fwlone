@@ -1,0 +1,16 @@
+{
+  "name": "fwlone/core",
+  "description": "Package for fwlone projects",
+  "authors": [
+    {
+      "name": "FWLone",
+      "email": "fwlone80@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-0": {
+      "MySuperApp": "lib"
+    }
+  }
+}
