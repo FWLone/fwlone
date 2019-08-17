@@ -11,8 +11,8 @@
   ],
   "require": {},
   "autoload": {
-    "psr-0": {
-      "fw\\": "./lib"
+    "psr-4": {
+      "FwCore\\": "./lib"
     }
   }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace fw;
+namespace FwCore;
 
-class cms
+class Cms
 {
 
     public $conf = [
