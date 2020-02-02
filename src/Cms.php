@@ -1,6 +1,6 @@
 <?php
 
-namespace FwCore;
+namespace Fwlone\Core;
 
 class Cms
 {

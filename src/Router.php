@@ -1,6 +1,6 @@
 <?php
 
-namespace FwCore;
+namespace Fwlone\Core;
 
 class Router
 {
@@ -15,15 +15,15 @@ class Router
         $request = isset($_GET['fw']) && $_GET['fw'] !== '' ? str_replace('..', '', $_GET['fw']) : 'main';
 
         if (substr($request, -1) == '/')
-            $request = $request . 'index.php';
+            $request = $request . 'index';
 
         if (!file_exists(H . '/app/modules/' . $request . '.php'))
-            $request = 'main.php';
+            $request = 'main';
 
         if (!is_file(H . '/app/modules/' . $request . '.php'))
             throw new \Exception('File not found: ' . $request);
         else
-            return $request;
+            return $request . '.php';
 
     }
 }
