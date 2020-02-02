@@ -5,39 +5,12 @@ namespace Fwlone\Core;
 class Cms
 {
 
-    public $conf = [
-        'db' => [
-            'host' => 'localhost',
-            'user' => 'root',
-            'base' => 'cms',
-            'pass' => ''
-        ],
-        'site' => [
-            'name' => 'FWLone CMS',
-            'title' => 'Example Site | FWLone CMS',
-            'keywords' => '',
-            'description' => '',
-            'tpl' => '/app/templates/'
-        ]
-    ];
-
     public function __construct()
     {
         $this->initSystemHandlers();
     }
 
-    public function config($str1 = null, $str2 = null)
-    {
-        if ($str1 != null && $str2 != null) {
-            return $this->conf[$str1][$str2];
-        } elseif ($str1 != null) {
-            return $this->conf[$str1];
-        } else {
-            return '';
-        }
-    }
-
-    public function guard($str)
+    public static function guard($str)
     {
         $str = strip_tags($str);
         $str = trim($str);

@@ -9,7 +9,9 @@
       "homepage": "https://fwlone.github.io/"
     }
   ],
-  "require": {},
+  "require": {
+    "thingengineer/mysqli-database-class": "^dev-master"
+  },
   "autoload": {
     "psr-4": {
       "Fwlone\\Core\\": "./src"
