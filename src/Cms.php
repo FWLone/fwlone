@@ -22,7 +22,7 @@ class Cms
 
     public function accessSecure($user, $level = 0)
     {
-        if (!$user && URL == '/login' && URL == '/registration') {
+        if (!$user && ($_SERVER['REQUEST_URI'] != '/login' && $_SERVER['REQUEST_URI'] != '/registration')) {
             header('location: /login');
             exit();
         } elseif ($user && $level == 0) {

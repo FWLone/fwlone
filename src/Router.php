@@ -12,15 +12,16 @@ class Router
 
     public function load()
     {
+        $root = $this->dir = $_SERVER['DOCUMENT_ROOT'] . '/';
         $request = isset($_GET['fw']) && $_GET['fw'] !== '' ? str_replace('..', '', $_GET['fw']) : 'main';
 
         if (substr($request, -1) == '/')
             $request = $request . 'index';
 
-        if (!file_exists(H . '/app/modules/' . $request . '.php'))
-            $request = 'main';
+        if (!file_exists($root . '/app/modules/' . $request . '.php'))
+            $request = '404';
 
-        if (!is_file(H . '/app/modules/' . $request . '.php'))
+        if (!is_file($root . '/app/modules/' . $request . '.php'))
             throw new \Exception('File not found: ' . $request);
         else
             return $request . '.php';
