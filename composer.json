@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "thingengineer/mysqli-database-class": "^dev-master"
+    "thingengineer/mysqli-database-class": "~2.9"
   },
   "autoload": {
     "psr-4": {
